@@ -16,21 +16,21 @@ To provide users with NEI-like light overlay.
 [[dependencies.lightoverlay]]
 modId = "cloth_config"
 type = "required"
-versionRange = "[12,)"
+versionRange = "[15,)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[dependencies.lightoverlay]]
 modId = "architectury"
 type = "required"
-versionRange = "[10,)"
+versionRange = "[13,)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[dependencies.lightoverlay]]
 modId = "neoforge"
 type = "required"
-versionRange = "[20.6,)"
+versionRange = "[21.0.0-,)"
 ordering = "NONE"
 side = "BOTH"
 
