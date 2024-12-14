@@ -124,6 +124,7 @@ public class LightOverlay {
                 b = Integer.parseInt((String) properties.computeIfAbsent("secondaryColorBlue", a -> "255"));
                 secondaryColor = (r << 16) + (g << 8) + b;
             }
+            enabled = ((String) properties.computeIfAbsent("enabledInGame", a -> "false")).equalsIgnoreCase("true");
             saveConfig(file);
         } catch (Exception e) {
             e.printStackTrace();
@@ -138,6 +139,7 @@ public class LightOverlay {
             showNumber = false;
             underwater = false;
             mushroom = false;
+            enabled = false;
             try {
                 saveConfig(file);
             } catch (IOException ex) {
@@ -194,6 +196,8 @@ public class LightOverlay {
         fos.write(("secondaryColorGreen=" + ((secondaryColor >> 8) & 255)).getBytes());
         fos.write("\n".getBytes());
         fos.write(("secondaryColorBlue=" + (secondaryColor & 255)).getBytes());
+        fos.write("\n".getBytes());
+        fos.write(("enabledInGame=" + (enabled)).getBytes());
         fos.close();
     }
     
