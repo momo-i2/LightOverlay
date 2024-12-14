@@ -29,7 +29,7 @@ public class ClothScreen {
         general.addEntry(eb.startColorField(Component.translatable("config.lightoverlay.yellowColor"), LightOverlay.yellowColor).setDefaultValue(0xFFFF00).setSaveConsumer(color -> LightOverlay.yellowColor = color).build());
         general.addEntry(eb.startColorField(Component.translatable("config.lightoverlay.redColor"), LightOverlay.redColor).setDefaultValue(0xFF0000).setSaveConsumer(color -> LightOverlay.redColor = color).build());
         general.addEntry(eb.startColorField(Component.translatable("config.lightoverlay.secondaryColor"), LightOverlay.secondaryColor).setDefaultValue(0x0000FF).setSaveConsumer(color -> LightOverlay.secondaryColor = color).build());
-        general.addEntry(eb.startBooleanToggle(Component.translatable("config.lightoverlay.enabledInGame"), LightOverlay.enabled).setDefaultValue(true).setSaveConsumer(bool-> LightOverlay.enabled = bool).build());
+        general.addEntry(eb.startBooleanToggle(Component.translatable("config.lightoverlay.enabledInGame"), LightOverlay.enabled).setDefaultValue(false).setSaveConsumer(bool-> LightOverlay.enabled = bool).build());
 
         return builder.setSavingRunnable(() -> {
             try {
